@@ -1,10 +1,13 @@
-const controllerHandler = require('./controllerHandler')
+const config = require('../config/index');
+const controllerHandler = require('./controllerHandler');
 const express = require('express')
     , router = express.Router()
-    , Question = require('../models/question')
+    , Question = require('../models/question');
 
-router.get('/:id', controllerHandler(Question.getById, (req, res, next) => [req.params.id]))
+router.get('/:id', controllerHandler(Question.getById, (req, res, next) => [req.params.id]));
 
-router.post('/', controllerHandler(Question.create, (req, res, next) => [req.body]))
+if (config.enableChanges) {
+    router.post('/', controllerHandler(Question.create, (req, res, next) => [req.body]));
+}
 
-module.exports = router
+module.exports = router;
