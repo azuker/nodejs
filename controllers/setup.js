@@ -1,8 +1,11 @@
-const controllerHandler = require('./controllerHandler')
+const config = require('../config/index');
+const controllerHandler = require('./controllerHandler');
 const express = require('express')
     , router = express.Router()
-    , Setup = require('../models/setup')    
+    , Setup = config.database.useSimulators
+        ? require('../models/setupSimulator')
+        : require('../models/setup');
 
-router.get('/', controllerHandler(Setup.init, (req, res, next) => [req.query.clear]))
+router.get('/', controllerHandler(Setup.init, (req, res, next) => [req.query.clear]));
 
-module.exports = router
+module.exports = router;
