@@ -242,3 +242,4 @@
 {"message":"::1 - - [29/Jan/2018:15:24:06 +0000] \"GET /setup HTTP/1.1\" 200 16 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36\"\n","level":"info"}
 {"message":"::1 - - [29/Jan/2018:15:24:09 +0000] \"GET /quizzes HTTP/1.1\" 200 520 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36\"\n","level":"info"}
 {"message":"::1 - - [29/Jan/2018:15:24:16 +0000] \"GET /questions HTTP/1.1\" 200 2253 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36\"\n","level":"info"}
+{"message":"Listening on port 3001","level":"info"}
